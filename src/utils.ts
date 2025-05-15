@@ -1,7 +1,7 @@
-// libs/utils.ts or libs/cn.ts
-import { clsx } from "clsx"
-import { twMerge } from "tailwind-merge"
-//@ts-ignore
-export function cn(...inputs) {
-  return twMerge(clsx(inputs))
+import clsx from "clsx";
+import type { ClassValue } from "clsx";
+import { twMerge } from "tailwind-merge";
+
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(...inputs));
 }
